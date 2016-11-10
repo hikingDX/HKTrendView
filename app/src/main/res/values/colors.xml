@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="bg_frame">#FF1C3E58</color>        <!-- 背景边框 -->
+    <color name="price_up">#FFF44949</color>        <!-- 价格 涨 -->
+    <color name="price_down">#FF339900</color>    <!-- 价格 跌 -->
+    <color name="price_equal">#FFFFFFFF</color>    <!-- 价格 平 -->
+    <color name="trend_mini">#FFFFFFFF</color>    <!-- 走势缩略图 -->
+    <color name="trend">#FFFFFFFF</color>            <!-- 走势线 -->
+    <color name="avgline">#FFFFA600</color>        <!-- 均 线 -->
+    <color name="volline">#FFEEEC81</color>        <!-- 成交量线 -->
+    <color name="lbline">#FFEEEC81</color>        <!-- 量比线 -->
+    <color name="bg_histrend">#C0222222</color>    <!-- 历史走势线背景 -->
+    <color name="kline_vol">#FFEEEC81</color>        <!-- K线 成交量柱线 -->
+    <color name="seperator">#FF183D55</color>        <!-- 报价栏 分割线 -->
+</resources>
