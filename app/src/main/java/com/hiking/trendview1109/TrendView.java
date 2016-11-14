@@ -26,6 +26,7 @@ import java.util.Date;
 public class TrendView extends FrameLayout {
     private final static String TAG = "TrendView";
     private boolean mPopinfoFlag;
+    private int mTotalNum;            //总数 包括历史走势
 
     private int mTopHeight = 36;
     private int mTechLineH = 24;    //指标信息行高度
