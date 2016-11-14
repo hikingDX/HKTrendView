@@ -85,7 +85,7 @@ public class TrendView extends FrameLayout {
         private int mLBColor;            //量比颜色
 
         private int mMinutes;            //交易分钟数
-        private int mTrendDays=4;            //走势线天数
+        private int mTrendDays=1;            //走势线天数
 
         /**
          * 构造方法
