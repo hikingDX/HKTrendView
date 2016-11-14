@@ -2,6 +2,7 @@ package com.hiking.trendview1109;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.CornerPathEffect;
 import android.graphics.DashPathEffect;
 import android.graphics.Paint;
@@ -30,6 +31,9 @@ public class TrendView extends FrameLayout {
     private int mFontH = 0;//字体高度
     private TrendLineView mTrendLineView;
     private Context mContext;
+
+    /***数据**/
+    private tagLocalStockData mStockData;
 
     public TrendView(Context context) {
         this(context, null);
@@ -155,7 +159,15 @@ public class TrendView extends FrameLayout {
          * @param canvas
          */
         private void drawTrendLine(Canvas canvas) {
-            //hello
+            //时间
+            mPaint.setTextSize(mFontSize);
+            double width = 0.0;
+            if (mTrendDays > 1){
+                mPaint.setColor(Color.GRAY);
+                mPaint.setTextAlign(Paint.Align.LEFT);
+                width = (double)(mLineRight-mLineLeft)/mTrendDays;
+
+            }
         }
 
         /**
@@ -216,14 +228,10 @@ public class TrendView extends FrameLayout {
 //                int tradenum = mStockData.getTradeMinute();
 //                if (tradenum > 1) {
 //                    float tempX = mLineLeft + (mLineRight - mLineLeft) * mStockData.getTimePoint(mStockData.tradetime[1]) / tradenum;
-//                    //    			path.moveTo(tempX, mTlineTopY);
-//                    //    			path.lineTo(tempX, mTlineBottomY);
-//                    //    			path.moveTo(tempX, mTechTopY);
-//                    //    			path.lineTo(tempX, mTechBottomY);
-//                    //    			canvas.drawPath(path, linePaint);
-//                    linePaint.setPathEffect(null);
-//                    canvas.drawLine(tempX, mTlineTopY, tempX, mTlineBottomY, linePaint);
-//                    canvas.drawLine(tempX, mTechTopY, tempX, mTechBottomY, linePaint);
+                float tempX = (mLineRight-mLineLeft)/2+mLineLeft;
+                    linePaint.setPathEffect(null);
+                    canvas.drawLine(tempX, mTlineTopY, tempX, mTlineBottomY, linePaint);
+                    canvas.drawLine(tempX, mTechTopY, tempX, mTechBottomY, linePaint);
 //                }
             }
 
