@@ -4,14 +4,20 @@ package com.hiking.trendview1109;
  * Created by Administrator on 2016/11/14.
  */
 public class tagLocalStockData {
-    public 	static final int			MAX_HIS_NUM = 4;
-    private	tagLocalTrendData[] 		trendData;		//走势数据
-    private	int							trendDataNum;	//走势数量
-    public	tagHisTrendData[]			hisTrendData;	//历史走势
-    public 	int							hisDays;
+    public static final int MAX_HIS_NUM = 4;
+    private tagLocalTrendData[] trendData;        //走势数据
+    private int trendDataNum;    //走势数量
+    public tagHisTrendData[] hisTrendData;    //历史走势
+    public int hisDays;
 
     public byte tradetimenum;    //交易段数,最多三段
     public int[] tradetime;        //交易时间 hour*60+minute[6]
+
+    // 历史走势
+    public int getHisTrendNum() {
+        //return hisTrendData.size();
+        return hisDays;
+    }
 
     public int getTradeMinute() {
         int num = 0;
